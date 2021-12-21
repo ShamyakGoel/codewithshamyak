@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codewithshamyak - An online platform to teach how to code</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Codewithshamyak</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About me</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Trending videos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=HcCbUOR25rc" target="_blank">Html tutorial for beginners #1</a></li>
+                  <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=g4sZlgtOhGA" target="_blank">Ms dos 7.1 setup on windows 10 64 bit / 32 bit</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <h1 class="text-center">Welcome to codewithshamyak</h1>
+    <p class="big">My aim is to teach you all to do computer programming. Check out my channel :- <a class="rem" target="_blank"href="https://www.youtube.com/channel/UCs6Xi3l9ck1TOhCzMDiTEsA">Codewithshamyak</a></p>
+    <div class="text-center">
+        <hr>
+    <button class="btn btn-primary" onclick="go('https://www.youtube.com/channel/UCs6Xi3l9ck1TOhCzMDiTEsA/playlists', true)">Check out my playlists</button>
+    <button class="btn btn-primary" onclick="go('https://www.youtube.com/channel/UCs6Xi3l9ck1TOhCzMDiTEsA', true)">Check out my channel</button>
+</div>
+<hr>
+<h1 class="text-center">Created playlists</h1> 
+<div class="Row">
+    <div class="Column">
+        <img src="html img.png" class="cursor" alt="Image" width="300px" height="300px" onclick="go('https://www.youtube.com/playlist?list=PLbQYiUiJNGDbhgae7kmAMCzLaah3JEWiS', true)">
+        <h3>Html tutorial for beginners</h3>
+    </div>
+
+    <div class="Column">
+        <img src="operating img.jpg" class="cursor" alt="Image" width="300px" height="300px" onclick="go('https://www.youtube.com/playlist?list=PLbQYiUiJNGDbYkN9nmWL5jxSz5O47W0eI', true)">
+        <h3>Setup of different operating systems</h3>
+    </div>
+</div>
+</body>
+<script src="bootstrap.min.js"></script>
+<!-- <script src="popper.min.js"></script> -->
+</html>
