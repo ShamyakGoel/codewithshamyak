@@ -16,3 +16,6 @@
 .Column {
     display: table-cell;
 }
+.description{
+    text-align:center;
+}
