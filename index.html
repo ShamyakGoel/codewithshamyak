@@ -11,15 +11,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <img src="icon.png" alt="">
+  <!-- <img src="icon.png" alt=""> -->
   <nav class="bg-slate-800 text-slate-400 flex justify-between">
     <span class="text-xl flex items-center mx-3 font-bold text-white"><a href="/Codewithshamyak/index.html/">Codewithshamyak</a></span>
     <ul class="px-28 py-4 flex space-x-11 justify-end">
-        <li><a class="text-white" href="https://shamyakgoel.github.io/Codewithshamyak/">Home</a></li>
-        <li><a class="hover:text-slate-300" href="https://shamyakgoel.github.io/Codewithshamyak/">About</a></li>
-        <li><a class="hover:text-slate-300" href="https://shamyakgoel.github.io/Codewithshamyak/os.html">All OS Download</a></li>
-        <li><a class="hover:text-slate-300" href="https://shamyakgoel.github.io/Codewithshamyak/code.html">Source Code</a></li>
-        <li><a class="hover:text-slate-300" href="/">Contact Me</a></li>
+        <li><a class="text-white" href="/Codewithshamyak/">Home</a></li>
+        <li><a class="hover:text-slate-300" href="./about.html">About</a></li>
+        <li><a class="hover:text-slate-300" href="./os.html">All OS Download</a></li>
+        <li><a class="hover:text-slate-300" href="./code.html">Source Code</a></li>
+        <li><a class="hover:text-slate-300" href="./contact.html">Contact Me</a></li>
         <button id="dropdownButton" data-dropdown-toggle="dropdown"></button>
     </ul>
 </nav>
@@ -32,13 +32,13 @@
 </div>
 <hr>
 <h1 class="text-center text-2xl my-5 font-bold">Created playlists</h1> 
-<div class="flex space-x-12">
-    <div class="font-bold text-xl">
-        <img src="html img.png" class="cursor-pointer" alt="Image" width="300px" height="280px" onclick="go('https://www.youtube.com/playlist?list=PLbQYiUiJNGDbhgae7kmAMCzLaah3JEWiS', true)">
+<div class="flex flex-nowrap justify-between ">
+    <div class="font-bold text-xl text-center ">
+        <img src="html img.png" class="cursor-pointer h-[230px]" alt="Image" width="300px" height="280px" onclick="go('https://www.youtube.com/playlist?list=PLbQYiUiJNGDbhgae7kmAMCzLaah3JEWiS', true)">
         <h3>Html tutorial for beginners</h3>
     </div>
 
-    <div class="font-bold text-xl">
+    <div class="font-bold text-xl text-center">
         <img src="operating img.jpg" class="cursor-pointer" alt="Image" width="300px" height="300px" onclick="go('https://www.youtube.com/playlist?list=PLbQYiUiJNGDbYkN9nmWL5jxSz5O47W0eI', true)">
         <h3>Setup of different operating systems</h3>
     </div>
