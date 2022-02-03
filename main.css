@@ -19,3 +19,14 @@
 .description{
     text-align:center;
 }
+.ma{
+    background-image: linear-gradient(to right, black, white);
+    color: white;
+}
+.main{
+    font-family: cursive;
+}
+.aboutCon{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+}
