@@ -31,7 +31,7 @@
             "slug": "html-tutorial-for-beginners-4",
             "name": "Html tutorials for beginners #4",
             "category": "html",
-            "embed" : "<iframe width='560' height='315' src='https://www.youtube.com/embed/rb3yb1N9RmE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+            "embed" : "<iframe src='https://www.youtube.com/embed/rb3yb1N9RmE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
         }
     ]
 }
