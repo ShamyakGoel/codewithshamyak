@@ -29,3 +29,10 @@
 .aboutCon{
     font-family: 'Courier New', Courier, monospace;
 }
+.element{
+    color: #0099ff;
+    display: inline;
+}
+.lt{
+    color: grey;
+}

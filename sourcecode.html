@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Codewithshamyak</title>
+    <style>
+        .ma {
+            background-image: linear-gradient(to right, black, white);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="bg-slate-800 text-slate-400 flex justify-between">
+        <span class="text-xl flex items-center mx-3 font-bold text-white"><a
+                href="/Codewithshamyak/index.html/">Codewithshamyak</a></span>
+        <ul class="px-28 py-4 flex space-x-11 justify-end">
+            <li><a class="text-white" href="https://codewithshamyak.epizy.com/">Home</a></li>
+            <li><a class="hover:text-slate-300" href="https://codewithshamyak.epizy.com/">About</a></li>
+            <li><a class="hover:text-slate-300" href="https://codewithshamyak.epizy.com/os.html">All OS
+                    Download</a></li>
+            <li><a class="hover:text-slate-300" href="https://codewithshamyak.epizy.com/code.html">Source Code</a>
+            </li>
+            <li><a class="hover:text-slate-300" href="https://codewithshamyak.epizy.com/">Contact Us</a></li>
+            <button id="dropdownButton" data-dropdown-toggle="dropdown"></button>
+        </ul>
+    </nav>
+    <marquee behavior="" direction="right" class="text-3xl ma">Welcome to Codewithshamyak</marquee>
+    <hr class="my-3">
+    <h1 class="text-center text-4xl my-6 font-semibold">Source code</h1>
+    <hr>
+    <div id="codediv" class="text-pink-700 font-semibold flex justify-center">
+        <hr>
+    </div>
+    </div>
+
+</body>
+<script>
+    async function render(){
+    let url = "./data.json"
+    let res = await fetch(url)
+    let json = await res.json()
+    let slug = location.href.split("?")[1].split("=")[1]
+    let type;
+    let div = document.getElementById("codediv")
+    for(i in json.data){
+        if(json.data[i].slug !== slug){
+          continue
+        }
+        let arr = Array.from(json.data[i].code)
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] === '<'){
+                arr[i] = '&lt;'
+            }
+            else if(arr[i] === '>'){
+                arr[i] = '&gt;'
+            }
+                        
+        }
+        console.log(json.data[i].code)
+        div.innerHTML = arr.join("")
+    }
+}
+render()
+</script>
+</html>
