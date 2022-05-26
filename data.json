@@ -32,6 +32,14 @@
             "name": "Html tutorials for beginners #4",
             "category": "html",
             "embed" : "<iframe width='560' height='315' src='https://www.youtube.com/embed/JsXzAD4fQhA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+        },
+        {
+            "index": 5,
+            "code": "<!DOCTYPE HTML> <html> <head> <title>Lists in html</title> </head> <body> <h1>Lists in html</h1> <p>Unordered list</p> <p>Ordered list</p> <h2>Unordered list</h2> <ul type="sqaure"> <li>Content</li> <li>Content</li> <li>Content</li> <li>Content</li> <li>Content</li> <li>Content</li> </ul> <h2>Ordered list</h2> <ol> <li>Content</li> <li>Content</li> <li>Content</li> <li>Content</li> <li>Content</li> </ol> </body> </html>",
+            "slug": "html-tutorial-for-beginners-5",
+            "name": "Html tutorials for beginners #5",
+            "category": "html",
+            "embed" : "<iframe src='https://www.youtube.com/embed/4PYV7AxvyrE' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
         }
     ]
 }
