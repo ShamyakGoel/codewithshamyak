@@ -35,13 +35,7 @@
     <hr class="my-3">
     <h1 class="text-center text-4xl my-6 font-semibold">Source code</h1>
     <hr>
-    <div id="codediv" class="text-pink-700 font-semibold flex justify-center">
-        <hr>
-    </div>
-    <div class="flex justify-center">
-        <button type="button" id="execute" class="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Execute Html &#8594;</button>
-    </div>
-    <div id="executehtml" class=" hidden justify-center my-10">
+    <div id="executehtml" class="justify-center my-10">
         
     </div>
 
@@ -79,30 +73,19 @@
         render()
     }
     set()
-    document.getElementById("execute").addEventListener('click', async ()=>{
-        location.replace('./executehtml.html?slug='+slug)
-    })
     async function render(){
     let type;
-    let div = document.getElementById("codediv")
+    let div = document.getElementById("executehtml")
+    document.getElementsByTagName('html')[0].remove() 
     for(i in json.data){
         if(json.data[i].slug !== slug){
           continue
         }
         let formattedHtml = format(json.data[i].code)
         console.log(formattedHtml)
-
-        let arr = Array.from(formattedHtml)
-        for (let i = 0; i < arr.length; i++) {
-            if(arr[i] === '<'){
-                arr[i] = '&lt;'
-            }
-            else if(arr[i] === '>'){
-                arr[i] = '&gt;'
-            }
-                        
-        }
-        div.innerHTML = `<pre>${arr.join("")}</pre>`
+        let html = document.createElement('html')
+        html.innerHTML = formattedHtml
+        document.append(html)
     }
 
 }
