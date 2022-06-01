@@ -51,7 +51,7 @@
         },
                 {
             "index": 7,
-            "code":"<!doctype html> <html> <head> <title>Images in html</title> </head> <body> <h1>Images in html</h1> <!-- <img src='1.jpg' alt='Image'></img> --> <form action='backend.php'> <input type='text' name='name' id='name'/> <br> <!-- cols are used to increase and decrease width --> <!-- rows are used to increase and decrease height --> <textarea cols='20' rows='100' ></textarea> <br> <input type='submit' value='Submit now'/> <input type='reset' value='Reset now'/> </form> </body> </html>"
+            "code":"<!doctype html> <html> <head> <title>Images in html</title> </head> <body> <h1>Images in html</h1> <!-- <img src='1.jpg' alt='Image'></img> --> <form action='backend.php'> <input type='text' name='name' id='name'/> <br> <!-- cols are used to increase and decrease width --> <!-- rows are used to increase and decrease height --> <textarea cols='20' rows='100' ></textarea> <br> <input type='submit' value='Submit now'/> <input type='reset' value='Reset now'/> </form> </body> </html>",
             "slug": "html-tutorial-for-beginners-7",
             "name": "Html tutorials for beginners #7",
             "category": "html",
