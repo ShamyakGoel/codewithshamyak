@@ -5,15 +5,14 @@ let seacrhObj;
 async function fetchVideos(){
   res = await fetch(jsonUrl)
   json = await res.json()
-  return {res,json}
 }
 async function render(){
     await fetchVideos()
     seacrhObj = new URLSearchParams(window.location.search)
     let cat = seacrhObj.get('slug')
     let type;
-    for(i in json.data){
-        let code = json.data[i].code
+    for(i in json[cat]){
+        let code = json[cat][i].code
         let arr = Array.from(code)
         for (let i = 0; i < arr.length; i++) {
             if(arr[i] === '<'){
@@ -24,20 +23,17 @@ async function render(){
             }           
         }
         code = arr.join("")
-        code = code.replace('>', '&gt;', json.data[i].code.length)
+        code = code.replace('>', '&gt;', json[cat][i].code.length)
         let div = document.getElementById("codediv")
-        if(json.data[i].category === 'html'){
-          type = 'html'
-        }
         div.innerHTML += `
         <div class="flex justify-center mx-3 my-3">
   <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-  ${json.data[i].embed}
+  ${json[cat][i].embed}
     <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
     <p class="text-gray-700 text-base mb-4">
-      ${json.data[i].name}
+      ${json[cat][i].name}
     </p>
-    <button type="button" onclick={location.replace("./sourcecode.html?slug=${json.data[i].slug}")} class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Download Source Code</button>
+    <button type="button" onclick={location.replace("./sourcecode.html?slug=${json[cat][i].slug}")} class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Download Source Code</button>
   </div>
 </div>
         `
@@ -45,17 +41,17 @@ async function render(){
 }
 render()
 async function copy(slug){
-    for(i in json.data){
-        if(json.data[i].slug === slug){
-            navigator.clipboard.writeText(json.data[i].code)
+    for(i in json[cat]){
+        if(json[cat][i].slug === slug){
+            navigator.clipboard.writeText(json[cat][i].code)
         }
     }
 }
 // let url = "./data.json"
 // let res = await fetch(url)
 // let json = await res.json()
-// for(i in json.data){
-//     if(json.data[i].slug === slug){
-//       SaveBlobAs(json.data[i].code, slug+"."+type)
+// for(i in json[cat]){
+//     if(json[cat][i].slug === slug){
+//       SaveBlobAs(json[cat][i].code, slug+"."+type)
 //     }
 // }

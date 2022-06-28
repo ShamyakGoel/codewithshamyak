@@ -8,7 +8,7 @@ async function render(){
         <div class="flex justify-center mx-3 my-3">
   <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
   
-  <a href="./playlists.html?slug=${json[i].slug}">
+  <a href="./playlists.html?slug=${json[i].name}">
   <img class="rounded-t-lg" src="${json[i].image}" alt=""/>
 </a>
 
