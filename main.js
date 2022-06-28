@@ -1,15 +1,18 @@
+const jsonUrl = './data.json'
+let res;
+let json;
+let seacrhObj;
+async function fetchVideos(){
+  res = await fetch(jsonUrl)
+  json = await res.json()
+  return {res,json}
+}
 async function render(){
-    let url = "./data.json"
-    let res = await fetch(url)
-    let json = await res.json()
-    let cat = location.href.split("?")[1].split("=")[1]
+    await fetchVideos()
+    seacrhObj = new URLSearchParams(window.location.search)
+    let cat = seacrhObj.get('slug')
     let type;
     for(i in json.data){
-        if(json.data[i].category !== cat){
-          console.log("no")
-          continue
-        }
-        console.log(json.data[i])
         let code = json.data[i].code
         let arr = Array.from(code)
         for (let i = 0; i < arr.length; i++) {
@@ -42,9 +45,6 @@ async function render(){
 }
 render()
 async function copy(slug){
-    let url = "./data.json"
-    let res = await fetch(url)
-    let json = await res.json()
     for(i in json.data){
         if(json.data[i].slug === slug){
             navigator.clipboard.writeText(json.data[i].code)
