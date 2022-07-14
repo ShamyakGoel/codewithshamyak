@@ -30,7 +30,7 @@ async function render(){
         <div class="flex justify-center mx-3 my-3">
   <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
   ${json[cat][i].embed}
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">${cat}</h5>
     <p class="text-gray-700 text-base mb-4">
       ${json[cat][i].name}
     </p>
