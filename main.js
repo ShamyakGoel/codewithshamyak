@@ -8,6 +8,7 @@ async function fetchVideos(){
 }
 async function render(){
     await fetchVideos()
+    console.log(json)
     seacrhObj = new URLSearchParams(window.location.search)
     let cat = seacrhObj.get('slug')
     let type;
