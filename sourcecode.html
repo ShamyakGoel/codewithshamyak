@@ -72,7 +72,9 @@
     let url = "./data.json"
     let res = null
     let json = null
-    let slug = location.href.split("?")[1].split("=")[1]
+    let searchobj = new URLSearchParams(window.location.search)
+    let slug = searchobj.get("slug")
+    let playlist = searchobj.get("playlist")
     async function set(){
         res = await fetch(url)
         json = await res.json()
@@ -85,11 +87,11 @@
     async function render(){
     let type;
     let div = document.getElementById("codediv")
-    for(i in json.data){
-        if(json.data[i].slug !== slug){
+    for(i in json[playlist]){
+        if(json[playlist][i].slug !== slug){
           continue
         }
-        let formattedHtml = format(json.data[i].code)
+        let formattedHtml = format(json[playlist][i].code)
         console.log(formattedHtml)
 
         let arr = Array.from(formattedHtml)
